@@ -1,0 +1,31 @@
+<!-- <div style="width: 500px; height: 500px">
+  <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
+    @for (slide of slides; track slide) {
+    <slide>
+      <img
+        [src]="slide.image"
+        alt="image slide"
+        style="display: block; width: 100%"
+      />
+      <div class="carousel-caption">
+        <h4>Slide {{ slide }}</h4>
+        <p>{{ slide.text }}</p>
+      </div>
+    </slide>
+    }
+  </carousel>
+</div> -->
+
+<div>
+  @for(o of (obs$ | async); track o){
+  {{ o.name }}
+  }
+</div>
+
+<div>
+  <span>{{count}}</span>
+  <br>
+  <button (click)="incrementCounter()">Increment</button>
+  <button (click)="decrementCounter()">Decrement</button>
+  <button (click)="resetCounter()">Reset</button>
+</div> 
